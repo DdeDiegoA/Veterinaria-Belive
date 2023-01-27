@@ -1,0 +1,188 @@
+@mixin btn-base {
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.25rem;
+    border: none;
+    height: 3rem;
+}
+
+@mixin btn-sm-modify {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+}
+
+$AmarilloOscuro: rgb(218, 172, 0);
+$Amarillo: rgb(252, 195, 2);
+$Azul:  rgb(0, 190, 201);
+$Footer: rgb(49, 49, 49);
+
+.main-menu {
+    margin-bottom: 0;
+    .list-item {
+        font-size: 0.8rem;
+        list-style: none;
+        display: inline;
+        margin: 0 0.5rem;
+    }
+        a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        
+        &:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    .search__input {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: transparent;
+        border: none;
+        color: #ffffff;
+        background-color: rgb(237, 187, 5);
+        padding: 0.7rem 1rem;
+        outline: none;
+        // border-radius: 30px;
+        width: 12em;
+        transition: all ease-in-out .5s;
+        margin-right: -2rem;
+        &:hover{
+          box-shadow: 0 0 2em #00000013;
+        }
+        &:focus{
+          background-color:rgb(246, 199, 30);
+        }
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: rgb(255, 255, 255);
+          }
+      }
+      .search__button {
+        border: none;
+        background-color: $Azul;
+        height: 3rem;
+        width: 4.2rem;
+        // margin-top: .1em;
+        &:hover {
+            cursor: pointer;
+          }
+        .search__icon {
+            height: 1.3em;
+            width: 1.3em;
+            color: #fdfdfd;
+          }
+      }
+ 
+  }
+.search__input:focus + .search__button {
+    background-color: rgb(0, 178, 187);
+  }
+.btn-main {
+    @include btn-base();
+    background-color: $Azul;
+    color: white;
+    border: solid 1px transparent;
+
+    &:hover {
+        background-color: white;
+        color: $Azul;
+        border: solid 1px $Azul;
+    }
+
+    &-s {
+        @extend .btn-main;
+        @include btn-sm-modify();
+    }
+}
+.btn-sec{
+    @include btn-base();
+    background-color:$Amarillo;
+    color: white;
+    border: solid 1px white;
+
+    &:hover{
+        background-color: rgb(191, 150, 14);;
+        border:solid 1px white;
+    }
+}
+.slide-feature{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+    .description {
+        .title {
+            font-weight: bold;
+            font-size: 1.4rem;
+            text-align: center;
+            padding-bottom: .5rem;
+            color: #ffffff;
+        }
+
+        .text {
+            color: rgb(255, 255, 255);
+            font-weight: 400;
+            text-align: center;
+            // min-height: 7rem;
+        }
+    }
+    .btn-main-s{
+        height: 2rem;
+    }
+}
+.slide-vetcare{
+    @extend .slide-feature;
+    .description{
+        .title{
+            font-size: 1.8rem;
+            color: black;
+        }
+        .text{
+            color: black;
+        }
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        i{
+            color: $Amarillo;
+            cursor: pointer;
+        }
+    }
+}
+.slide-kpics{
+    @extend .slide-feature;
+    i{
+        font-size: 7rem;
+        color:#ffffff
+    }
+}
+.slide-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+    .card-subtitle{
+        color: $Azul;
+    }
+    .card-link{
+        color:$Azul;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
