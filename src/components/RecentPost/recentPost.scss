@@ -1,0 +1,21 @@
+@use "../../sass/globals";
+@use "../../sass/components";
+
+.sec-recent-post{
+    @include globals.sections-display();
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .intro{
+        @include globals.intros();
+        h3{
+            color: black;
+            font-weight: 700;
+        }
+        p{color:black}
+    }
+    background-color: #ffff;
+}

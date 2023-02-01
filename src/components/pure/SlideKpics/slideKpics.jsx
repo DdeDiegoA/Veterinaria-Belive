@@ -1,4 +1,5 @@
 import React from "react";
+import "./slideKpics.scss";
 
 const SlideKpics = ({ icon, title, text }) => {
     return (

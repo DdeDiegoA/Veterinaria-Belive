@@ -1,4 +1,5 @@
 import React from "react";
+import "./slideVetcare.scss";
 
 const SlideVetcare = ({ srcImg, alt, title, text }) => {
     return (

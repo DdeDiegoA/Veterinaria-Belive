@@ -1,0 +1,55 @@
+@use "../../sass/globals";
+@use "../../sass/components";
+
+.sec-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @include globals.sections-display();
+    
+
+    .home-cta {
+        flex: 0;
+        color: white;
+
+        .home-title {
+            width: 50rem;
+            font-size: 3.3rem;
+            font-weight: 600;
+        }
+
+        .home-description {
+            width: 35rem;
+        }
+        
+        
+    }
+}
+
+.sec-video-2{
+    @extend .sec-home;
+    background-color: #ffff;
+    gap: 1rem;
+    .home-cta{
+        text-align: right;
+    }
+    .home-img{
+        z-index: 1;
+        position: relative;
+    }
+    .home-img::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -1vw;
+        right: -1vw;
+        width: 15rem;
+        height: 15rem;
+        z-index: -1;
+        background-color: components.$Amarillo;
+      }
+    .btn-sec{
+        justify-self: flex-start;
+    }
+}

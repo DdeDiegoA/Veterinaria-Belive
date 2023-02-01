@@ -1,24 +1,19 @@
 import React from "react";
+import "./sectionVideo1.scss";
 
-const SectionVideo1 = () => {
+const SectionVideo1 = ({ title, description }) => {
     return (
         <section className="sec-video">
-            <div className="home-cta">
-                <h2 className="home-title display-2">
-                    As a veterinarian and lover of animals
-                </h2>
-                <p className="home-descripion">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                </p>
+            <div className="video">
+                <h2 className="video-title display-2">{title}</h2>
+                <p className="videdo-descripion">{description}</p>
                 <div className="lead-magnet row align-items-center">
                     <div className="d-flex flex-row bd-highlight mb-3">
                         <button className="btn-sec">Our Service</button>
                     </div>
                 </div>
             </div>
-            <div className="home-img d-none d-md-block">
+            <div className="home-video d-none d-md-block">
                 <img src="src/assets/img/Veterinaria/video1.png" alt="video1" />
             </div>
         </section>

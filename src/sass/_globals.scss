@@ -1,233 +1,68 @@
 @use "components";
+// @use "../components/Slider1/slide1";
 
 @mixin sections-display {
     width: 100%;
-    padding: 3rem;
+    padding: 3rem 6rem;
     margin: auto;
     background-color: components.$Amarillo;
 }
+
 @mixin intros {
     text-align: center;
-
+    width: 50%;
     h3 {
         font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
         color: #ffff;
+        text-transform: uppercase;
     }
 
     p {
         font-size: 1.2rem;
         color: #ffff;
+        margin-bottom: 2rem;
     }
 }
+
+@mixin slide-display{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    img{
+        margin-bottom: 2rem;
+    }
+}
+
 body {
     padding: 0;
     margin: 0;
 
 }
-.nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 4rem;
-    background-color:components.$AmarilloOscuro ;
 
-    .logo img {
-        margin: 0;
-        max-width: 10rem;
-        max-height: 4rem;
-    }
-    
-}
-.sec-home {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    
-    @include sections-display();
-    // gap: 3rem;
-
-    .home-cta {
-        flex: 0;
-
-        .home-title {
-            width: 50rem;
-            font-size: 3rem;
-            font-weight: 600;
-        }
-
-        .home-description {
-            width: 35rem;
-        }
-        
-        
-    }
-}
-.sec-video{
-    @extend .sec-home;
-    background-color: #ffff;
-    gap: 1rem;
-    .home-img{
-        z-index: 1;
-        position: relative;
-    }
-    .home-img::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -1vw;
-        left: -1vw;
-        width: 15rem;
-        height: 15rem;
-        z-index: -1;
-        background-color: components.$Amarillo;
-      }
-}
-.sec-video-2{
-    @extend .sec-home;
-    background-color: #ffff;
-    gap: 1rem;
-    .home-cta{
-        text-align: right;
-    }
-    .home-img{
-        z-index: 1;
-        position: relative;
-    }
-    .home-img::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -1vw;
-        right: -1vw;
-        width: 15rem;
-        height: 15rem;
-        z-index: -1;
-        background-color: components.$Amarillo;
-      }
-    .btn-sec{
-        justify-self: flex-start;
-    }
-}
-.sec-benefits{
-    @include sections-display();
-    border-top: 1px solid #ddd;
-
-    .intro{
-        @include intros();
-    }
-   
-}
-.sec-buy{
-    @extend .sec-benefits;
-    .tachado{
-        text-decoration: line-through;
-    }
-}
-.sec-vetcare{
-    @extend .sec-benefits;
-    background-color: #ffff;
-    .intro{
-        h3{color: black;}
-        p{color:black}
-    }
-}
-.sec-kpics{
-    @extend .sec-benefits;
-    padding: 0;
-    background-color:rgb(252, 195, 2);
-    background-image: url("src/assets/img/Veterinaria/perro2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    .over{
-        flex: 1;
-        padding: 3rem;
-        margin: 0;
-        background-color: rgba(252, 194, 2, 0.704);;
-    }
-}
-.sec-recent-post{
-    @extend .sec-benefits;
-    .intro{
-        h3{
-            color: black;
-            font-weight: 700;
-        }
-        p{color:black}
-    }
-    background-color: #ffff;
-}
-.sec-footer-cta{
-    background-color: components.$Footer;
-    padding: 3rem;
-    display: flex;
-    color: #ffff;
-    align-items: stretch;
-    justify-content: center;
-    margin: auto;
-    gap: 1.5rem;
-    
-    .info{display: flex; flex-direction: column;}
-    .contact{
-        display: flex;
-        text-align: right;
-        max-width: 20rem;
-        
-        .contact-info{
-           justify-self: flex-end;
-        }
-        .search{
-            justify-content: flex-end;
-            .search__input{
-                height:3rem ;
-            }
-                .search__button{
-                    // padding: 1.3rem;
-                    height: 3rem;
-                    width: 4.2rem;
-                    .search__icon{
-                        height: 1.3em;
-                        width: 1.3em;
-                        color: #ffff;
-                    }
-                }
-            
-        }
-    }
-    .social{
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-        gap: 1rem;
-        
-        color: components.$Amarillo;
-        cursor: pointer;
-    }
-    
-}
 
 @media only screen and (max-width: 1376px) {
     .sec-home{
         .home-cta{
-            max-width: 50vw;
+            max-width: 50%;
         }
         .home-img{
-            max-width: 50vw;
-            scale: (.7);
+            max-width: 50%;
+            scale: (.95);
         }
     }
-    .sec-video,.sec-video-2 {
-        display: block;
-        .home-cta{
-            max-width: 100%;
+    // .sec-video,.sec-video-2 {
+    //     display: block;
+    //     .home-cta{
+    //         max-width: 100%;
         
-        }
-        .home-img{
-            display: none !important;
-        }
-    }
+    //     }
+    //     .home-img{
+    //         display: none !important;
+    //     }
+    // }
 }
 @media only screen and (max-width: 658px) {
     .sec-home{

@@ -1,0 +1,18 @@
+@use "../../sass/globals";
+@use "../../sass/components";
+
+.sec-kpics{
+    @include globals.sections-display();
+    padding: 0;
+    background-image: url("src/assets/img/Veterinaria/perro2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+    .over{
+        flex: 1;
+        padding: 3rem;
+        margin: 0;
+        background-color: rgba(252, 194, 2, 0.704);
+    }
+}

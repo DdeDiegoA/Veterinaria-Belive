@@ -1,6 +1,7 @@
 import React from "react";
-import SlideFeature from "./pure/slideFeature";
-import SlideKpics from "./pure/slideKpics";
+// import SlideFeature from "./pure/slideFeature";
+import SlideKpics from "../pure/SlideKpics/slideKpics";
+import "./sectionKpic.scss";
 
 const SectionKpic = () => {
     return (

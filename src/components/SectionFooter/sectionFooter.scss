@@ -1,0 +1,67 @@
+@use "../../sass/globals";
+@use "../../sass/components";
+
+.sec-footer-cta{
+    @include globals.sections-display();
+
+    background-color: components.$Footer;
+    padding: 3rem;
+    color: #ffff;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    margin: auto;
+
+    gap: 1rem;
+    
+    .about-info,.serv-info{
+        display: flex;
+        flex-direction: column;
+        h4{
+            font-size: 25px;
+        }
+        span{
+            font-size: 18px;
+        }
+    }
+    
+    .contact{
+        display: flex;
+        text-align: right;
+        max-width: 20rem;
+        
+        .contact-info{
+           justify-self: flex-end;
+        }
+        .search{
+            justify-content: flex-end;
+            .search__input{
+                height:3rem ;
+                width: 16rem;
+            }
+                .search__button{
+                    // padding: 1.3rem;
+                    height: 3rem;
+                    width: 4.2rem;
+                    .search__icon{
+                        height: 1.3em;
+                        width: 1.3em;
+                        color: #ffff;
+                    }
+                }
+            
+        }
+    }
+    .social{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        gap: 1rem;
+        
+        color: #ffff;
+        cursor: pointer;
+    }
+    
+}

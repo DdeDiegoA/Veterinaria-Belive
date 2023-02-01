@@ -1,0 +1,23 @@
+@use "../../../sass/globals";
+@use "../../../sass/components";
+
+.slide-card{
+    @include globals.slide-display();
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
+    .card-subtitle{
+        color: components.$Azul;
+    }
+    .card-link{
+        color:components.$Azul;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

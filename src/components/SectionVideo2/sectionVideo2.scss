@@ -1,0 +1,42 @@
+@use "../../sass/globals";
+@use "../../sass/components";
+// @use "../SectionVideo/sectionVideo1";
+
+.sec-video-2{
+    @include globals.sections-display();
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    background-color: rgb(255, 255, 255);
+
+    .video{
+        width: 50%;
+        text-align: right;
+        .video-title{
+            font-size: 3.3rem;
+            font-weight: 600;
+        }
+        
+    }
+
+    .home-video{
+        scale: (.82);
+        z-index: 1;
+        position: relative; 
+    }
+
+    .home-video::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2vw;
+        right: -2vw;
+        width: 15rem;
+        height: 15rem;
+        z-index: -1;
+        background-color: components.$Amarillo;
+      }
+}

@@ -18,7 +18,8 @@ $Footer: rgb(49, 49, 49);
 .main-menu {
     margin-bottom: 0;
     .list-item {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
+        font-weight: 600;
         list-style: none;
         display: inline;
         margin: 0 0.5rem;
@@ -46,7 +47,7 @@ $Footer: rgb(49, 49, 49);
         border: none;
         color: #ffffff;
         background-color: rgb(237, 187, 5);
-        padding: 0.7rem 1rem;
+        padding: 0.5rem 1rem;
         outline: none;
         // border-radius: 30px;
         width: 12em;
@@ -66,7 +67,7 @@ $Footer: rgb(49, 49, 49);
       .search__button {
         border: none;
         background-color: $Azul;
-        height: 3rem;
+        height: 2.5rem;
         width: 4.2rem;
         // margin-top: .1em;
         &:hover {
@@ -79,10 +80,11 @@ $Footer: rgb(49, 49, 49);
           }
       }
  
-  }
-.search__input:focus + .search__button {
-    background-color: rgb(0, 178, 187);
-  }
+    .search__input:focus + .search__button {
+          background-color: rgb(0, 178, 187);
+      }
+}
+
 .btn-main {
     @include btn-base();
     background-color: $Azul;
@@ -109,80 +111,5 @@ $Footer: rgb(49, 49, 49);
     &:hover{
         background-color: rgb(191, 150, 14);;
         border:solid 1px white;
-    }
-}
-.slide-feature{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-
-
-    .description {
-        .title {
-            font-weight: bold;
-            font-size: 1.4rem;
-            text-align: center;
-            padding-bottom: .5rem;
-            color: #ffffff;
-        }
-
-        .text {
-            color: rgb(255, 255, 255);
-            font-weight: 400;
-            text-align: center;
-            // min-height: 7rem;
-        }
-    }
-    .btn-main-s{
-        height: 2rem;
-    }
-}
-.slide-vetcare{
-    @extend .slide-feature;
-    .description{
-        .title{
-            font-size: 1.8rem;
-            color: black;
-        }
-        .text{
-            color: black;
-        }
-    }
-    .social{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 1rem;
-        i{
-            color: $Amarillo;
-            cursor: pointer;
-        }
-    }
-}
-.slide-kpics{
-    @extend .slide-feature;
-    i{
-        font-size: 7rem;
-        color:#ffffff
-    }
-}
-.slide-card{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 1rem;
-    .card-subtitle{
-        color: $Azul;
-    }
-    .card-link{
-        color:$Azul;
-        text-decoration: none;
-        font-weight: bold;
-
-        &:hover{
-            text-decoration: underline;
-        }
     }
 }

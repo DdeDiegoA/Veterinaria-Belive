@@ -1,0 +1,28 @@
+@use "../../sass/globals";
+@use "../../sass/components";
+
+.sec-buy{
+    @include globals.sections-display();
+    border-top: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+
+    .intro{
+        @include globals.intros();
+        
+    }
+    .description{
+        .title{
+            font-size: 35px;
+        }
+    }
+    .tachado{
+        text-decoration: line-through;
+        padding: .8rem;
+    }
+    .btn-main-s{
+        border-radius: 40px;
+    }
+}

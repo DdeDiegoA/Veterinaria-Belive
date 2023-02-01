@@ -1,11 +1,11 @@
 import React from "react";
-import "../sass/_globals.scss";
+import "./sectionFooter.scss";
 
 const SectionFooter = () => {
     return (
         <div className="sec-footer-cta">
             <div className="about">
-                <div className="info">
+                <div className="about-info">
                     <h4>About</h4>
 
                     <span>history</span>
@@ -17,7 +17,7 @@ const SectionFooter = () => {
             </div>
 
             <div className="serv">
-                <div className="info">
+                <div className="serv-info">
                     <h4>Services</h4>
 
                     <span>How To Order</span>

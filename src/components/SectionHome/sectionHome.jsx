@@ -1,18 +1,12 @@
 import React from "react";
+import "./sectionHome.scss";
 
-const SectionHome = () => {
+const SectionHome = ({ title, description }) => {
     return (
         <section className="sec-home">
             <div className="home-cta">
-                <h2 className="home-title display-2">
-                    FIRST I WANTED TO BE A VETERANIAN
-                </h2>
-                <p className="home-description ">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
+                <h2 className="home-title display-2">{title}</h2>
+                <p className="home-description ">{description}</p>
                 <div className="lead-magnet row aling-items-center">
                     <div className="d-flex flex-row bd-highlight mb-3 gap-3">
                         <button className="btn-main">Contact Us</button>
